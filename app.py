@@ -150,6 +150,6 @@ def get_predictions():
         'act_section': act_section,
         'judgment': judgment
     })
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))  # Use PORT from environment, default to 5000
+    app.run(debug=True, host='0.0.0.0', port=port)
