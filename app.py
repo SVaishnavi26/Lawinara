@@ -3,8 +3,10 @@ import pickle
 import tensorflow as tf
 import numpy as np
 from preprocess import extract_features 
-from predict import extract_features, predict_case 
-from transformers import AutoTokenizer, AutoModel  # Ensure this function is implemented correctly
+from transformers import AutoTokenizer, AutoModel  
+from predict1 import predict_case
+
+
 
 app = Flask(__name__)
 app.secret_key = "Lawinara"
@@ -118,9 +120,6 @@ def signup():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if not act_model or not judg_model:
-        return jsonify({"error": "Models are not properly loaded."}), 500
-    
     data = request.json
     case_description = data.get('case_description', '').strip()
     
@@ -129,16 +128,13 @@ def predict():
     
     try:
         prediction = predict_case(case_description)
-        
-        if "error" in prediction:
-            return jsonify({"error": prediction["error"]}), 500
-        
+
         # Store predictions in session for results page
-        session['predicted_act_section'] = prediction["Predicted Act/Section"]
+        session['predicted_act_section'] = prediction["Predicted Act & Section"]
         session['predicted_judgment'] = prediction["Predicted Judgment"]
         
         return jsonify({
-            "act_section": prediction["Predicted Act/Section"],
+            "act_section": prediction["Predicted Act & Section"],
             "judgment": prediction["Predicted Judgment"],
             "redirect": "/results"
         })
