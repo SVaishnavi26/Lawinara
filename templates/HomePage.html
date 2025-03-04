@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawinara - Legal Insights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/HomePage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button id="toggleBtn" class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="{{ url_for('home') }}" class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="{{ url_for('explore') }}" class="nav-btn">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-btn">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            <a href="{{ url_for('model_page') }}" class="nav-btn">
+                <i class="fas fa-robot"></i>
+                <span>Try Model</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <div class="logo-search-container">
+                <div class="logo-container">
+                    <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Lawinara Logo" class="logo">
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search legal insights..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="user-section">
+                <div class="auth-buttons" id="authButtons">
+                    <a href="{{ url_for('login') }}" class="auth-btn login-btn">Login</a>
+                    <a href="{{ url_for('signup') }}" class="auth-btn signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- News Section -->
+        <div class="news-container">
+            <h2>Latest Legal Updates</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <h3>Supreme Court's New Guidelines on Family Disputes</h3>
+                    <p class="date">February 22, 2025</p>
+                    <p>The Supreme Court has issued comprehensive guidelines for resolving family disputes through mediation, emphasizing the importance of preserving family relationships...</p>
+                </div>
+
+                <div class="news-card">
+                    <h3>Digital Court Proceedings Enhancement</h3>
+                    <p class="date">February 20, 2025</p>
+                    <p>Family courts nationwide are implementing advanced digital systems for virtual hearings, making justice more accessible to families...</p>
+                </div>
+
+                <div class="news-card">
+                    <h3>Child Custody Law Amendments</h3>
+                    <p class="date">February 18, 2025</p>
+                    <p>New amendments to child custody laws focus on the best interests of children, introducing mandatory counseling sessions for parents...</p>
+                </div>
+
+                <div class="news-card">
+                    <h3>Family Court Backlog Reduction Initiative</h3>
+                    <p class="date">February 15, 2025</p>
+                    <p>A new fast-track system has been implemented to address pending family court cases, aiming to reduce waiting times...</p>
+                </div>
+                <div class="news-card">
+                    <h3>Domestic Violence Protection Enhancement</h3>
+                    <p class="date">February 13, 2025</p>
+                    <p>Family courts have strengthened protective measures for domestic violence survivors, including expedited hearing processes...</p>
+                </div>
+
+                <div class="news-card">
+                    <h3>Alimony Guidelines Update</h3>
+                    <p class="date">February 10, 2025</p>
+                    <p>Updated guidelines for alimony calculations have been released, considering modern economic factors and lifestyle changes...</p>
+                </div>
+
+                <div class="news-card">
+                    <h3>Multi-State Family Law Coordination</h3>
+                    <p class="date">February 8, 2025</p>
+                    <p>New interstate cooperation framework established for handling cross-state family court cases...</p>
+                </div>
+
+                <div class="news-card">
+                    <h3>Family Court Infrastructure Upgrade</h3>
+                    <p class="date">February 5, 2025</p>
+                    <p>Major renovation and modernization project announced for family courts across multiple districts...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/HomePage.js') }}"></script>
+</body>
+</html>

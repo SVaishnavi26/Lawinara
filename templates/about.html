@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lawinara</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button id="toggleBtn" class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="{{ url_for('home') }}" class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="{{ url_for('explore') }}" class="nav-btn">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-btn">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            <a href="{{ url_for('model_page') }}" class="nav-btn">
+                <i class="fas fa-robot"></i>
+                <span>Try Model</span>
+            </a>
+        </nav>
+    </div>
+<div class="main-content">
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Lawinara</h1>
+            <p>An innovative AI-powered legal prediction platform designed to make legal knowledge accessible, efficient, and reliable. Our mission is to bridge the gap between complex legal systems and the public by providing expert insights and AI-driven predictions, simplifying legal decision-making for everyone.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="mission-section">
+            <h2>Our Mission & Values</h2>
+            <div class="mission-text">
+                <p>At Lawinara, our mission is clear:</p>
+            </div>
+            <div class="mission-values">
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3><span class="checkmark">✅</span>Innovate</h3>
+                    <p>Develop AI-powered legal prediction models to enhance family law case analysis.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3><span class="checkmark">✅</span>Empower</h3>
+                    <p>Provide judges, lawyers, and individuals with valuable legal insights.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3><span class="checkmark">✅</span>Impact</h3>
+                    <p>Bridge the gap between complex legal systems and the public for better access to justice.</p>
+                </div>
+            </div>
+            <div class="values-statement">
+                <p>We uphold the values of accuracy, transparency, and innovation, leveraging technology to simplify legal decision-making and drive meaningful changes in the legal landscape.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/static/images/vaishnavi 1 (1).jpg" alt="Vaishnavi S">
+                    <h3>Vaishnavi S</h3>
+                    <p>Research Lead</p>
+                    <p>Specializing in Deep Learning for Legal Analysis</p>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/sowmiya 1.jpg" alt="Sowmiya S T">
+                    <h3>Sowmiya S T</h3>
+                    <p>AI Developer</p>
+                    <p>Focused on Legal Data Processing & Model Training</p>
+                </div>
+                <div class="team-member">
+                    <img src="/static/images/turandra.jpg" alt="Turandra Manikandan">
+                    <h3>Turandra Manikandan</h3>
+                    <p>Software Engineer</p>
+                    <p>Bridging Technology with Legal Solutions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Join Us On This Journey</h2>
+            <p>We welcome collaborations with passionate researchers, legal experts, and AI enthusiasts. Whether you're a student, a legal professional, or an AI innovator, let's shape the future of AI-driven legal predictions together!</p>
+            <p>Contact us at: support@lawinara.com</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+    </div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+</body>
+</html>

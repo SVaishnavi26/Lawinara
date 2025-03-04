@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Insights - Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button id="toggleBtn" class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="{{ url_for('home') }}" class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="{{ url_for('explore') }}" class="nav-btn">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-btn">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            <a href="{{ url_for('model_page') }}" class="nav-btn">
+                <i class="fas fa-robot"></i>
+                <span>Try Model</span>
+            </a>
+        </nav>
+    </div>
+    
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Results Container -->
+        <div class="results-container">
+            <!-- Results Header -->
+            <div class="header">RESULTS</div>
+
+            <!-- Act and Section Box -->
+            <div class="info-box">
+                <div class="info-header">ACT AND SECTION</div>
+                <div class="info-content" id="actSectionContent">
+                    {{act_section}}
+                </div>
+            </div>
+
+            <!-- Judgement Box -->
+            <div class="info-box">
+                <div class="info-header">JUDGEMENT</div>
+                <div class="info-content" id="judgementContent">
+                    {{judgement}}
+                </div>
+            </div>
+
+            <!-- Edit Description Button -->
+            <a href="{{ url_for('model_page') }}" class="edit-description-btn">
+                EDIT DESCRIPTION
+            </a>
+            
+            
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+</body>
+</html>

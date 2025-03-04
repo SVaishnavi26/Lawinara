@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Insights - Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/HomePage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/model.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>Analyzing your case...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="error-message hidden">
+        <p></p>
+        <button class="close-error">×</button>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button id="toggleBtn" class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="{{ url_for('home') }}" class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="{{ url_for('explore') }}" class="nav-btn">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-btn">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            <a href="{{ url_for('model_page') }}" class="nav-btn">
+                <i class="fas fa-robot"></i>
+                <span>Try Model</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Model Interface -->
+        <div class="model-container">
+            <div class="model-header">
+                <h1>CASE DESCRIPTION</h1>
+            </div>
+            <div class="model-content">
+                <form id="caseForm">
+                    <div class="description-box">
+                        <textarea 
+                            id="caseDescription" 
+                            name="caseDescription"
+                            placeholder="Enter your case description"
+                            required
+                            minlength="50"
+                            maxlength="5000"
+                        ></textarea>
+                        <div class="character-count">
+                            <span id="currentCount">0</span>
+                            <span>/5000 characters</span>
+                        </div>
+                    </div>
+                    <button type="button" id="submitCase" class="submit-btn">DONE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='js/model.js') }}"></script>
+</body>
+</html>

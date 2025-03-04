@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Family Law</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button id="toggleBtn" class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="{{ url_for('home') }}" class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="{{ url_for('explore') }}" class="nav-btn">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-btn">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            <a href="{{ url_for('model_page') }}" class="nav-btn">
+                <i class="fas fa-robot"></i>
+                <span>Try Model</span>
+            </a>
+        </nav>
+    </div>
+    <div class="main-content" id="main-content">
+    <div class="container">
+        <header class="header">
+            <h1>Understanding Family Law & Legal Predictions</h1>
+            <p>Explore comprehensive insights into family law and legal predictions</p>
+        </header>
+
+        <section class="overview-section">
+            <div class="content-box">
+                <h2>Family Law Overview</h2>
+                <p>Family law governs matters related to marriage, divorce, child custody, inheritance, and other domestic relationships. It ensures the protection of individuals' rights within a family structure while addressing disputes fairly.</p>
+                <div class="law-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-gavel"></i>
+                        <span>Marriage & Divorce Laws</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-child"></i>
+                        <span>Child Custody & Support</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Domestic Violence Protection</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-home"></i>
+                        <span>Property & Inheritance Rights</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="laws-section">
+            <h2>Key Sections & Acts in Family Law</h2>
+            
+            <div class="law-categories">
+                <div class="law-category">
+                    <div class="category-header">
+                        <span class="number">1️⃣</span>
+                        <h3>Marriage & Divorce Laws</h3>
+                    </div>
+                    <p>These laws regulate marriage, separation, and divorce proceedings, ensuring the legal rights of both spouses.</p>
+                    <div class="acts">
+                        <div class="act">
+                            <h4>Hindu Marriage Act, 1955</h4>
+                            <p>Governs marriage, divorce, and maintenance among Hindus.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Special Marriage Act, 1954</h4>
+                            <p>Provides legal recognition for interfaith and civil marriages.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Muslim Personal Law (Shariat) Application Act, 1937</h4>
+                            <p>Regulates marriage, divorce, and inheritance for Muslims.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="law-category">
+                    <div class="category-header">
+                        <span class="number">2️⃣</span>
+                        <h3>Child Custody & Support</h3>
+                    </div>
+                    <p>Defines parental responsibilities and financial support for children after separation or divorce.</p>
+                    <div class="acts">
+                        <div class="act">
+                            <h4>Guardian and Wards Act, 1890</h4>
+                            <p>Governs custody and guardianship matters.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Hindu Minority and Guardianship Act, 1956</h4>
+                            <p>Covers guardianship of Hindu minors.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Juvenile Justice Act, 2015</h4>
+                            <p>Ensures child welfare in custody disputes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="law-category">
+                    <div class="category-header">
+                        <span class="number">3️⃣</span>
+                        <h3>Domestic Violence Protection</h3>
+                    </div>
+                    <p>Protects individuals from abuse and ensures legal remedies for victims.</p>
+                    <div class="acts">
+                        <div class="act">
+                            <h4>Protection of Women from Domestic Violence Act, 2005</h4>
+                            <p>Provides protection, residence, and financial support for victims.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Dowry Prohibition Act, 1961</h4>
+                            <p>Criminalizes the demand and exchange of dowry in marriages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="law-category">
+                    <div class="category-header">
+                        <span class="number">4️⃣</span>
+                        <h3>Property & Inheritance Rights</h3>
+                    </div>
+                    <p>Regulates the division of property and inheritance among family members.</p>
+                    <div class="acts">
+                        <div class="act">
+                            <h4>Hindu Succession Act, 1956</h4>
+                            <p>Defines inheritance laws for Hindus.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Indian Succession Act, 1925</h4>
+                            <p>Governs inheritance rights for Christians, Parsis, and interfaith individuals.</p>
+                        </div>
+                        <div class="act">
+                            <h4>Muslim Personal Law Act, 1937</h4>
+                            <p>Covers inheritance rights for Muslims.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-section">
+            <h2>Explore Legal Predictions with AI</h2>
+            <div class="ai-features">
+                <div class="feature">
+                    <div class="feature-icon">🏛</div>
+                    <h3>Identify Relevant Laws</h3>
+                    <p>Our AI determines the specific section or Article of the law that applies to your case.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Predict Legal Outcomes</h3>
+                    <p>Get insights into likely judgments based on the identified laws.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Clarity & Guidance</h3>
+                    <p>Access insights from real cases and expert analysis.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Regular updates with expert legal input for accuracy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Start Exploring Legal Insights Today!</h2>
+            <button class="cta-button">Try Our AI Model</button>
+        </section>
+    </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/explore.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Insights - Create Account</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-container">
+            <div class="sidebar">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7zm1-11h-2v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/>
+                </svg>
+                <h2>Legal Insights</h2>
+                <p>Predict your case outcomes with AI-powered legal analysis</p>
+                <p class="sub-text">Make informed decisions about your legal matters</p>
+            </div>
+            <div class="form-container">
+                <h1>Create Account</h1>
+                <form id="signupForm" action="/signup" method="POST">
+                    <div class="input-group">
+                        <div class="name-group">
+                            <div class="input-field">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="create-account-btn">Create Account</button>
+                </form>
+                <p class="signin-text">Already have an account? <a href="/login">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+</body>
+</html>
